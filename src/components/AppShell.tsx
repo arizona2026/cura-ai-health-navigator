@@ -6,19 +6,20 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { LogOut } from "lucide-react";
 
-export function AppShell({ title, children }: { title?: string; children: ReactNode }) {
+export function AppShell({ title, extras, children }: { title?: string; extras?: ReactNode; children: ReactNode }) {
   const { signOut, profile } = useAuth();
   const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-40 border-b border-border bg-card/80 backdrop-blur-md">
+      <header className="sticky top-0 z-40 border-b border-border bg-card/85 backdrop-blur-md">
         <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
           <CuraLogo size="md" />
           {title && (
             <h1 className="hidden text-sm font-semibold text-muted-foreground md:block">{title}</h1>
           )}
           <div className="flex items-center gap-2">
+            {extras}
             <LanguageToggle />
             {profile && (
               <Button variant="ghost" size="sm" onClick={signOut} className="gap-1.5">

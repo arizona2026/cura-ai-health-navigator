@@ -53,6 +53,15 @@ export default {
           foreground: "hsl(var(--accent-foreground))",
           soft: "hsl(var(--accent-soft))",
         },
+        orange: {
+          DEFAULT: "hsl(var(--orange))",
+          foreground: "hsl(var(--orange-foreground))",
+          soft: "hsl(var(--orange-soft))",
+        },
+        "dark-surface": {
+          DEFAULT: "hsl(var(--dark-surface))",
+          foreground: "hsl(var(--dark-surface-foreground))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

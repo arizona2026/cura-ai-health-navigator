@@ -1,9 +1,9 @@
 import { supabase } from "@/integrations/supabase/client";
 
 export const DEMO_ACCOUNTS = {
-  patient: { email: "maria.patient@curaai.demo", password: "DemoPass123!", name: "Maria Garcia", lang: "es" as const },
-  doctor: { email: "chen.doctor@curaai.demo", password: "DemoPass123!", name: "Dr. Sarah Chen", lang: "en" as const },
-  driver: { email: "carlos.driver@curaai.demo", password: "DemoPass123!", name: "Carlos Mendez", lang: "en" as const },
+  patient: { email: "maria@cura.demo", password: "Demo1234!", name: "Maria Garcia", lang: "es" as const },
+  doctor: { email: "drchen@cura.demo", password: "Demo1234!", name: "Dr. Sarah Chen", lang: "en" as const },
+  driver: { email: "carlos@cura.demo", password: "Demo1234!", name: "Carlos Mendez", lang: "en" as const },
 };
 
 /**

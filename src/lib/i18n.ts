@@ -144,6 +144,172 @@ export const translations = {
   errInvalid: { en: "Please fill in all fields.", es: "Por favor completa todos los campos." },
   errAuth: { en: "Authentication failed.", es: "Error de autenticación." },
 
+  // Landing — nav
+  nav_signIn: { en: "Sign In", es: "Iniciar Sesión" },
+
+  // Landing — hero
+  hero_badge: {
+    en: "Hack Arizona 2026 — Southern Arizona Social Innovation Track",
+    es: "Hack Arizona 2026 — Innovación Social del Sur de Arizona",
+  },
+  hero_headline: {
+    en: "Chronic Care for Rural Arizona, Reimagined",
+    es: "Atención Crónica para la Arizona Rural, Reimaginada",
+  },
+  hero_subheadline: {
+    en: "Cura AI connects patients managing diabetes, heart disease, and respiratory illness with AI-powered guidance, volunteer support, and their Banner physician — all via smartphone or SMS.",
+    es: "Cura AI conecta a pacientes con diabetes, enfermedad cardíaca o respiratoria con orientación impulsada por IA, apoyo voluntario y su médico de Banner — todo por smartphone o SMS.",
+  },
+  hero_cta_primary: { en: "See How It Works", es: "Ver Cómo Funciona" },
+  hero_cta_secondary: { en: "Sign In to Platform", es: "Iniciar Sesión" },
+  hero_trust1: { en: "Banner Health Partner", es: "Aliado de Banner Health" },
+  hero_trust2: { en: "Powered by Claude AI", es: "Impulsado por Claude AI" },
+  hero_trust3: { en: "Works via SMS", es: "Funciona por SMS" },
+
+  // Landing — problem
+  prob_title: { en: "The Rural Healthcare Gap", es: "La Brecha de Salud Rural" },
+  prob_stat1_num: { en: "82 miles", es: "82 millas" },
+  prob_stat1_desc: {
+    en: "Average distance rural Arizona patients travel for specialist care",
+    es: "Distancia promedio que los pacientes rurales de Arizona recorren para atención especializada",
+  },
+  prob_stat2_num: { en: "1 in 3", es: "1 de cada 3" },
+  prob_stat2_desc: {
+    en: "Rural patients skip recommended follow-ups due to distance and cost",
+    es: "Pacientes rurales omiten controles recomendados por distancia y costo",
+  },
+  prob_stat3_num: { en: "$8,400", es: "$8,400" },
+  prob_stat3_desc: {
+    en: "Average cost of a preventable ER visit that Cura aims to eliminate",
+    es: "Costo promedio de una visita a urgencias prevenible que Cura busca eliminar",
+  },
+  prob_paragraph: {
+    en: "In Southern Arizona, patients managing chronic conditions like Type 2 diabetes and hypertension face an impossible choice: drive hours for routine care, or skip it and risk their health. Cura AI changes this equation.",
+    es: "En el sur de Arizona, los pacientes con condiciones crónicas como diabetes tipo 2 e hipertensión enfrentan una decisión imposible: manejar horas para una consulta rutinaria u omitirla y arriesgar su salud. Cura AI cambia esta ecuación.",
+  },
+
+  // Landing — features
+  feat_title: { en: "Four Ways Cura AI Helps", es: "Cuatro Formas en que Cura AI Ayuda" },
+  feat_subtitle: { en: "Built for real patients in rural communities", es: "Construido para pacientes reales en comunidades rurales" },
+  feat1_title: { en: "AI Health Navigator", es: "Navegador de Salud IA" },
+  feat1_desc: {
+    en: "Patients describe their symptoms and receive personalized, history-aware guidance in English or Spanish. Before every appointment, their doctor receives a Claude AI-generated brief — no chart-scrolling required.",
+    es: "Los pacientes describen sus síntomas y reciben orientación personalizada basada en su historial, en inglés o español. Antes de cada cita, su doctor recibe un resumen generado por Claude AI — sin tener que leer el expediente.",
+  },
+  feat2_title: { en: "Community Ride Network", es: "Red Comunitaria de Transporte" },
+  feat2_desc: {
+    en: "Patients request rides via the app or a simple text message. Volunteer drivers in their area are notified and matched automatically. Drivers earn community credits and recognition on a public leaderboard.",
+    es: "Los pacientes solicitan transporte por la app o un simple mensaje de texto. Los conductores voluntarios cercanos son notificados y emparejados automáticamente. Ganan créditos comunitarios y reconocimiento en una tabla pública.",
+  },
+  feat3_title: { en: "Works Without Internet", es: "Funciona Sin Internet" },
+  feat3_desc: {
+    en: "Every feature in Cura AI is accessible via plain text message from any phone on any carrier. Rural patients text symptoms, request rides, confirm medications, and get AI responses — no smartphone or data plan required.",
+    es: "Cada función de Cura AI está disponible por mensaje de texto desde cualquier teléfono y operador. Los pacientes rurales envían síntomas, piden transporte, confirman medicamentos y reciben respuestas de IA — sin smartphone ni datos.",
+  },
+  feat4_title: { en: "English & Spanish", es: "Inglés y Español" },
+  feat4_desc: {
+    en: "Cura AI detects the patient's language automatically and responds in kind. Every part of the platform — notifications, AI advice, appointment reminders, ride confirmations — is fully bilingual.",
+    es: "Cura AI detecta automáticamente el idioma del paciente y responde en el mismo. Toda la plataforma — notificaciones, consejos de IA, recordatorios y confirmaciones de viaje — es totalmente bilingüe.",
+  },
+
+  // Landing — journey
+  journey_title: { en: "Meet Maria", es: "Conoce a María" },
+  journey_subtitle: {
+    en: "Maria is 58, lives in Ajo, Arizona — 82 miles from the nearest Banner clinic. She has Type 2 diabetes and hypertension.",
+    es: "María tiene 58 años, vive en Ajo, Arizona — a 82 millas de la clínica Banner más cercana. Tiene diabetes tipo 2 e hipertensión.",
+  },
+  step1: { en: "Maria texts \"Me duelen los pies\"", es: "María escribe \"Me duelen los pies\"" },
+  step2: { en: "Cura AI analyzes her history and replies in Spanish with personalized advice", es: "Cura AI analiza su historial y responde en español con consejo personalizado" },
+  step3: { en: "Dr. Chen receives an AI brief before their telehealth call", es: "El Dr. Chen recibe un resumen IA antes de la videollamada" },
+  step4: { en: "Maria requests a ride to her in-person appointment via SMS", es: "María pide transporte a su cita presencial por SMS" },
+  step5: { en: "Carlos the volunteer driver accepts, earns community credits", es: "Carlos, conductor voluntario, acepta y gana créditos comunitarios" },
+
+  // Landing — integration
+  integ_title: { en: "Built for Banner Health", es: "Hecho para Banner Health" },
+  integ_desc: {
+    en: "Cura AI is designed to integrate seamlessly with Banner – University Family Care's existing systems. Patient data is structured for HL7/FHIR export, and the platform is designed to complement Banner's HealthTrioConnect portal.",
+    es: "Cura AI está diseñado para integrarse sin fricciones con los sistemas existentes de Banner – University Family Care. Los datos están estructurados para exportación HL7/FHIR y complementan el portal HealthTrioConnect de Banner.",
+  },
+  integ_ready: { en: "Integration Ready", es: "Listo para Integrarse" },
+  integ_pt1: { en: "AHCCCS / Medicaid compatible", es: "Compatible con AHCCCS / Medicaid" },
+  integ_pt2: { en: "FHIR-ready data structure", es: "Estructura de datos lista para FHIR" },
+  integ_pt3: { en: "Designed for Banner HealthTrioConnect", es: "Diseñado para Banner HealthTrioConnect" },
+
+  // Footer
+  footer_team: { en: "Built by Team Cura for Banner – University Family Care", es: "Hecho por el Equipo Cura para Banner – University Family Care" },
+  footer_track: { en: "Hack Arizona 2026 — Southern Arizona Social Innovation Track", es: "Hack Arizona 2026 — Innovación Social del Sur de Arizona" },
+  footer_powered: { en: "Powered by Claude AI + Supabase + Twilio", es: "Impulsado por Claude AI + Supabase + Twilio" },
+  footer_franke: { en: "Presented to the W.A. Franke Honors College, University of Arizona", es: "Presentado a W.A. Franke Honors College, Universidad de Arizona" },
+
+  // Login extras
+  welcomeBack: { en: "Welcome back", es: "Bienvenido" },
+  signInSubtitle: { en: "Sign in to your Cura AI account", es: "Inicia sesión en tu cuenta de Cura AI" },
+  demoAccounts: { en: "Demo Accounts", es: "Cuentas Demo" },
+  demoPatient: { en: "Patient (Maria)", es: "Paciente (María)" },
+  demoDoctor: { en: "Doctor (Dr. Chen)", es: "Doctor (Dr. Chen)" },
+  demoDriver: { en: "Driver (Carlos)", es: "Conductor (Carlos)" },
+  back: { en: "Back", es: "Atrás" },
+  showPassword: { en: "Show password", es: "Mostrar contraseña" },
+  hidePassword: { en: "Hide password", es: "Ocultar contraseña" },
+
+  // Patient extras
+  navigatorTitle: { en: "Cura AI Navigator", es: "Navegador Cura AI" },
+  navigatorSubtitle: {
+    en: "Describe how you're feeling and I'll give you personalized guidance based on your health history",
+    es: "Describe cómo te sientes y te daré orientación personalizada basada en tu historial",
+  },
+  navigatorPlaceholder: {
+    en: "Tell me how you're feeling today...",
+    es: "Cuéntame cómo te sientes hoy...",
+  },
+  respondingIn: { en: "Responding in", es: "Respondiendo en" },
+  langEnglish: { en: "English", es: "Inglés" },
+  langSpanish: { en: "Spanish", es: "Español" },
+  saveToTimeline: { en: "Save to Timeline", es: "Guardar en historial" },
+  savedToTimeline: { en: "Saved to your timeline", es: "Guardado en tu historial" },
+  filter_all: { en: "All", es: "Todos" },
+  filter_checkins: { en: "Check-ins", es: "Chequeos" },
+  filter_ai: { en: "AI Advice", es: "Consejos IA" },
+  filter_appts: { en: "Appointments", es: "Citas" },
+  filter_rides: { en: "Rides", es: "Viajes" },
+  yourMedications: { en: "Your Medications", es: "Tus Medicamentos" },
+  markTaken: { en: "Mark as taken today", es: "Marcar como tomado hoy" },
+  needRide: { en: "Need a Ride?", es: "¿Necesitas Transporte?" },
+  smsModeTitle: { en: "SMS Mode", es: "Modo SMS" },
+  smsModeSubtitle: { en: "How Cura AI works without internet", es: "Cómo funciona Cura AI sin internet" },
+  notifications: { en: "Notifications", es: "Notificaciones" },
+
+  // Doctor extras
+  searchPatients: { en: "Search patients...", es: "Buscar pacientes..." },
+  bannerReady: { en: "Banner HealthTrioConnect — Integration Ready", es: "Banner HealthTrioConnect — Listo" },
+  messagePatient: { en: "Message Patient", es: "Mensaje al Paciente" },
+  send: { en: "Send", es: "Enviar" },
+  messageSent: { en: "Message sent", es: "Mensaje enviado" },
+  upcomingApptsCount: { en: "Upcoming Appointments", es: "Próximas Citas" },
+  flaggedToday: { en: "Flagged Today", es: "Marcadas Hoy" },
+  apptType: { en: "Type", es: "Tipo" },
+  apptDate: { en: "Date & Time", es: "Fecha y Hora" },
+  apptStatus: { en: "Status", es: "Estado" },
+  apptActions: { en: "Actions", es: "Acciones" },
+  patientCol: { en: "Patient", es: "Paciente" },
+  fhirNote: { en: "Designed for Banner HealthTrioConnect integration — FHIR export ready", es: "Diseñado para integración con Banner HealthTrioConnect — exportación FHIR lista" },
+  generatingSummary: { en: "Generating AI summary...", es: "Generando resumen de IA..." },
+
+  // Driver extras
+  driverWelcome: { en: "Welcome", es: "Bienvenido" },
+  yourActiveRides: { en: "Your Active Rides", es: "Tus Viajes Activos" },
+  liveLabel: { en: "Live", es: "En vivo" },
+  noRidesEmpty: {
+    en: "No rides available right now. We'll notify you when a patient needs help!",
+    es: "No hay viajes disponibles ahora. Te avisaremos cuando un paciente necesite ayuda.",
+  },
+  topDrivers: { en: "Top volunteer drivers in Southern Arizona", es: "Mejores conductores voluntarios del Sur de Arizona" },
+  howCredits: { en: "How Credits Work", es: "Cómo funcionan los créditos" },
+  howCreditsBody: {
+    en: "Earn 15 credits per completed ride. Credits are redeemable at local partner businesses across Southern Arizona — coffee shops, grocery stores, and pharmacies. Credits are Cura AI's way of saying thank you for keeping rural communities connected to care.",
+    es: "Gana 15 créditos por cada viaje completado. Los créditos se canjean en negocios aliados del sur de Arizona — cafeterías, tiendas y farmacias. Los créditos son la forma de Cura AI de agradecerte por mantener conectadas a las comunidades rurales con su atención.",
+  },
+
   // Time
   ago_minute: { en: "minute ago", es: "minuto" },
   ago_minutes: { en: "minutes ago", es: "minutos" },
