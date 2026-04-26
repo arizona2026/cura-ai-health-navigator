@@ -16,9 +16,10 @@ import { calculateAge, timeAgo } from "@/lib/i18n";
 import { toast } from "sonner";
 import {
   Users, Calendar, Flag, ExternalLink, Loader2, Bot, Stethoscope, Sparkles,
-  Search, MessageSquare, CheckCircle2, Send,
+  Search, MessageSquare, CheckCircle2, Send, Plus,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { AddPatientSheet } from "@/components/AddPatientSheet";
 
 interface PatientWithProfile {
   id: string;
@@ -70,6 +71,8 @@ export default function DoctorDashboard() {
   const [msgPatient, setMsgPatient] = useState<PatientWithProfile | null>(null);
   const [msgText, setMsgText] = useState("");
   const [msgSending, setMsgSending] = useState(false);
+
+  const [addPatientOpen, setAddPatientOpen] = useState(false);
 
   const loadAll = async () => {
     if (!user) return;
