@@ -19,6 +19,8 @@ import {
   CheckCircle2, Bell,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { StructuredAiInput, StructuredInputValue } from "@/components/StructuredAiInput";
+import { calculateAge } from "@/lib/i18n";
 
 interface PatientRow {
   id: string;
