@@ -5,9 +5,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { AuthProvider } from "@/contexts/AuthContext";
-import Index from "./pages/Index.tsx";
-import Login from "./pages/Login.tsx";
-import NotFound from "./pages/NotFound.tsx";
+import Landing from "./pages/Landing";
+import Login from "./pages/Login";
+import RoleRouter from "./pages/RoleRouter";
+import PatientDashboard from "./pages/PatientDashboard";
+import DoctorDashboard from "./pages/DoctorDashboard";
+import DriverDashboard from "./pages/DriverDashboard";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -20,9 +24,12 @@ const App = () => (
           <Sonner />
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<Index />} />
+              <Route path="/" element={<Landing />} />
               <Route path="/login" element={<Login />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="/app" element={<RoleRouter />} />
+              <Route path="/patient" element={<RoleRouter require="patient"><PatientDashboard /></RoleRouter>} />
+              <Route path="/doctor" element={<RoleRouter require="doctor"><DoctorDashboard /></RoleRouter>} />
+              <Route path="/driver" element={<RoleRouter require="volunteer_driver"><DriverDashboard /></RoleRouter>} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
