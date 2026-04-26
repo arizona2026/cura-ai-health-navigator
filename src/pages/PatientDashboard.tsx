@@ -104,7 +104,7 @@ export default function PatientDashboard() {
   const [doctorName, setDoctorName] = useState<string>("Dr. Chen");
   const [loading, setLoading] = useState(true);
 
-  const [symptoms, setSymptoms] = useState("");
+  const [lastInput, setLastInput] = useState<StructuredInputValue | null>(null);
   const [aiResponse, setAiResponse] = useState<string | null>(null);
   const [aiTimestamp, setAiTimestamp] = useState<string | null>(null);
   const [aiLoading, setAiLoading] = useState(false);
@@ -150,28 +150,51 @@ export default function PatientDashboard() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?.id]);
 
-  const handleAiSubmit = async () => {
-    if (!symptoms.trim()) return;
+  const handleAiSubmit = async (val: StructuredInputValue) => {
+    setLastInput(val);
     setAiLoading(true);
     setAiResponse(null);
     setAiFlagged(false);
     setAiSaved(false);
+
+    // Save sms_checkin event with structured input
+    if (user) {
+      await supabase.from("health_timeline").insert({
+        patient_id: user.id,
+        event_type: "sms_checkin",
+        content: {
+          en: `Check-in: feeling ${val.feeling}, symptoms: ${val.symptoms.join(", ")} (severity ${val.severity}/10).`,
+          es: `Chequeo: sintiéndose ${val.feeling}, síntomas: ${val.symptoms.join(", ")} (severidad ${val.severity}/10).`,
+          structured_input: JSON.stringify({
+            feeling: val.feeling,
+            symptoms: val.symptoms,
+            severity: val.severity,
+            medication_adherence: val.medAdherence,
+            reactions: val.reactions,
+          }),
+          raw_summary: val.rawSummary,
+          language: lang,
+        },
+      });
+    }
+
     await new Promise((r) => setTimeout(r, 1800));
     setAiResponse(MOCK_AI_RESPONSE[lang]);
     setAiTimestamp(new Date().toISOString());
     setAiLoading(false);
+    loadData();
   };
 
   const insertAdvice = async (flagged: boolean) => {
     if (!user || !aiResponse) return;
+    const summary = lastInput?.rawSummary ?? "";
     const { error } = await supabase.from("health_timeline").insert({
       patient_id: user.id,
       event_type: "ai_advice",
       content: {
-        en: `Patient reported: "${symptoms}". AI advice: ${MOCK_AI_RESPONSE.en}`,
-        es: `Paciente reportó: "${symptoms}". Consejo IA: ${MOCK_AI_RESPONSE.es}`,
+        en: `Patient summary: ${summary}. AI advice: ${MOCK_AI_RESPONSE.en}`,
+        es: `Resumen del paciente: ${summary}. Consejo IA: ${MOCK_AI_RESPONSE.es}`,
         flagged: flagged ? "true" : "false",
-        symptoms,
       },
     });
     if (error) {
